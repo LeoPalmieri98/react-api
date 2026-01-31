@@ -13,4 +13,5 @@ body {
 
 .card-size {
   width: 18rem;
+  object-fit: cover;
 }
