@@ -34,20 +34,17 @@ function App() {
               {person.name}
             </h5>
             <p className="card-text">
-              {person.birth_year}
+              {person.nationality} , {person.birth_year}
             </p>
             <p className="card-text">
-              {person.nationality}
+              {person.biography}
             </p>
-            <p className="card-text">
-              {person.biography
-              }
-            </p>
-            <p className="card-text">
-              {person.known_for
-
-              }
-            </p>
+            <ul className="card-text list-unstyled">  Noto per:
+              {person.known_for.map((film, i) => { return <li key={i}>{film},</li> })}
+            </ul>
+            <ul className="card-text list-unstyled d-flex">
+              Premi: {person.awards.map((award, i) => { return <li key={i}>{award},</li> })}
+            </ul>
           </div>
         ))}
       </div>
