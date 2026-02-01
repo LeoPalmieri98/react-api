@@ -5,13 +5,18 @@
 }
 
 body {
-  background-color: black !important;
-  color: white !important;
+  background-color: rgb(36, 30, 30) !important;
   font-family: sans-serif;
   padding: 1rem;
 }
 
 .card-size {
-  width: 18rem;
+  width: 13rem;
   object-fit: cover;
+
+}
+
+.img-size {
+  height: 15rem !important;
+
 }

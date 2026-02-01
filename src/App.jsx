@@ -35,27 +35,27 @@ function App() {
   useEffect(mounted, []);
 
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">Hollywood Stars</h1>
-      <h2>Attori:</h2>
-      <div className="d-flex flex-wrap gap-3 justify-content-center">
+    <div className="container mt-5 text-white">
+      <h1 className="text-center mb-4 mt-4">Hollywood Stars</h1>
+      <h2 className="ms-5">Attori:</h2>
+      <div className="d-flex flex-wrap gap-3 justify-content-center mt-5">
         {actors.map((person, index) => (
-          <div className="card card-size" key={index}>
+          <div className="card card-size text-white bg-dark" key={index}>
             <img
               src={person.image}
-              className="card-img-top"
+              className="card-img-top img-size"
               alt={person.name}
             />
-            <h5 className="card-text">
+            <h5 className="card-text mt-3 ">
               {person.name}
             </h5>
-            <p className="card-text">
+            <p className="card-text ">
               {person.nationality} , {person.birth_year}
             </p>
-            <p className="card-text">
+            <p className="card-text ">
               {person.biography}
             </p>
-            <ul className="card-text list-unstyled">  Noto per:
+            <ul className="card-text list-unstyled ">  Noto per:
               {person.known_for && person.known_for.map((film, i) => { return <li key={i}>{film},</li> })}
             </ul>
             <p className="card-text d-flex">
@@ -65,18 +65,18 @@ function App() {
         ))}
       </div>
 
-      <hr />
+      <hr className='m-5' />
 
-      <h2>Attrici:</h2>
-      <div className="d-flex flex-wrap gap-3 justify-content-center">
+      <h2 className="ms-5">Attrici:</h2>
+      <div className="d-flex flex-wrap gap-3 justify-content-center mt-5">
         {actresses.map((girl, index) => (
-          <div className="card card-size" key={index}>
+          <div className="card card-size bg-secondary" key={index}>
             <img
               src={girl.image}
-              className="card-img-top"
+              className="card-img-top img-size"
               alt={girl.name}
             />
-            <h5 className="card-text">
+            <h5 className="card-text mt-3">
               {girl.name}
             </h5>
             <p className="card-text">
@@ -102,3 +102,4 @@ function App() {
 }
 
 export default App
+
